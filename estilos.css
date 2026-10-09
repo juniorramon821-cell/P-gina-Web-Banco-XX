@@ -1,0 +1,738 @@
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #172033;
+    background-color: #ffffff;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+header {
+    background-color: #ffffff;
+    padding: 12px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e5ea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo */
+
+.logo img {
+    width: 190px;
+    height: auto;
+    display: block;
+}
+
+
+/* =========================================================
+   MENÚ PRINCIPAL
+   ========================================================= */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    color: #172033;
+    text-decoration: none;
+    padding: 12px 13px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #0879d1;
+}
+
+
+/* =========================================================
+   SUBMENÚ
+   ========================================================= */
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 210px;
+    background-color: #ffffff;
+    border: 1px solid #e1e5ea;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    width: 100%;
+}
+
+.submenu li a {
+    color: #172033;
+    padding: 12px 15px;
+}
+
+.submenu li a:hover {
+    background-color: #eef7fd;
+    color: #0879d1;
+}
+
+
+/* =========================================================
+   INICIO
+   ========================================================= */
+
+.hero {
+    background-color: #eef7fd;
+    padding: 70px 7%;
+}
+
+.hero-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-texto {
+    max-width: 600px;
+}
+
+.etiqueta,
+.titulo-seccion span {
+    color: #0879d1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    color: #09264b;
+    font-size: 52px;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #4d596b;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.boton {
+    display: inline-block;
+    background-color: #0879d1;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    margin-top: 15px;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #09264b;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.seccion {
+    padding: 80px 7%;
+}
+
+.fondo {
+    background-color: #f5f8fb;
+}
+
+.titulo-seccion {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.titulo-seccion h2 {
+    color: #09264b;
+    font-size: 36px;
+    margin: 12px 0;
+}
+
+.titulo-seccion p {
+    color: #5d6878;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   NOSOTROS
+   ========================================================= */
+
+.nosotros-contenido {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.imagen-seccion img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.texto-seccion h3 {
+    color: #09264b;
+    font-size: 30px;
+}
+
+.texto-seccion p {
+    line-height: 1.7;
+    color: #566174;
+}
+
+.mini-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.mini-tarjetas article {
+    background-color: #f5f8fb;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mini-tarjetas h4 {
+    color: #0879d1;
+    margin-top: 0;
+}
+
+.seguridad {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #eef7fd;
+    border-left: 4px solid #0879d1;
+}
+
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+
+.productos {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e1e5ea;
+    transition: 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-contenido {
+    padding: 22px;
+}
+
+.numero {
+    color: #0879d1;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.producto h3 {
+    color: #09264b;
+    font-size: 23px;
+}
+
+.producto p {
+    color: #606b7b;
+    line-height: 1.6;
+}
+
+.producto a {
+    color: #0879d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.producto a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   EMPRESAS
+   ========================================================= */
+
+.empresas-contenido {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.empresa-imagen img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.empresa-texto article {
+    border-bottom: 1px solid #dce1e7;
+    padding: 20px 0;
+}
+
+.empresa-texto h3 {
+    color: #09264b;
+}
+
+.empresa-texto p {
+    color: #5d6878;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BANCA DIGITAL
+   ========================================================= */
+
+.digital-grid {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.digital-grid article {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e5ea;
+}
+
+.digital-grid img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.digital-grid div {
+    padding: 25px;
+}
+
+.digital-grid h3 {
+    color: #09264b;
+    font-size: 23px;
+}
+
+.digital-grid p {
+    color: #5d6878;
+    line-height: 1.6;
+}
+
+.digital-grid a {
+    color: #0879d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   EDUCACIÓN FINANCIERA
+   ========================================================= */
+
+.educacion-contenido {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.educacion-imagen img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.consejos article {
+    padding: 18px 0;
+    border-bottom: 1px solid #e0e5ea;
+}
+
+.consejos span {
+    color: #0879d1;
+    font-weight: bold;
+}
+
+.consejos h3 {
+    color: #09264b;
+}
+
+.consejos p {
+    color: #5d6878;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.contacto-seccion {
+    background-color: #eef7fd;
+}
+
+.contacto-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.contacto-imagen img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.contacto-info {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contacto-info h3 {
+    color: #09264b;
+    font-size: 26px;
+}
+
+.contacto-info p {
+    color: #566174;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+form {
+    margin-top: 25px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    color: #172033;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd2da;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #0879d1;
+}
+
+form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #0879d1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #09264b;
+}
+
+
+/* =========================================================
+   OFICINAS
+   ========================================================= */
+
+.oficinas {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 7%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.oficinas h2 {
+    color: #09264b;
+    font-size: 32px;
+}
+
+.oficinas p {
+    color: #5d6878;
+    line-height: 1.7;
+}
+
+.oficinas img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+footer {
+    background-color: #09264b;
+    color: white;
+    padding: 50px 7% 20px;
+}
+
+.footer-contenido {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-contenido h2 {
+    font-size: 27px;
+}
+
+.footer-contenido h3 {
+    color: #69b9f5;
+}
+
+.footer-contenido p {
+    color: #d3dce7;
+}
+
+.footer-contenido a {
+    display: block;
+    color: #d3dce7;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.footer-contenido a:hover {
+    color: white;
+}
+
+.copyright {
+    max-width: 1150px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #31506f;
+    text-align: center;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA TABLETS
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .digital-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/*ADAPTACIÓN PARA CELULARES*/
+
+@media (max-width: 700px) {
+
+    header {
+        position: static;
+    }
+
+    .logo img {
+        width: 170px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero-imagen img {
+        height: 250px;
+    }
+
+    .nosotros-contenido,
+    .empresas-contenido,
+    .educacion-contenido,
+    .contacto-grid,
+    .oficinas {
+        grid-template-columns: 1fr;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .digital-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion {
+        padding: 55px 6%;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 29px;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
